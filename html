@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambiente de Trabalho Médico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="barra-edicao">
+            <h2>Barra de Edição</h2>
+            <div id="ferramentas-edicao">
+                <button id="cortar"><i class="fas fa-cut"></i> Cortar</button>
+                <button id="redimensionar"><i class="fas fa-expand-arrows-alt"></i> Redimensionar</button>
+                <button id="rotacionar"><i class="fas fa-sync-alt"></i> Rotacionar</button>
+                <button id="aplicar-colormap"><i class="fas fa-palette"></i> Color Map Jet</button>
+                <button id="carregar-ecg"><i class="fas fa-wave-square"></i> Carregar ECG</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside id="seletor-imagens">
+            <h3>Imagens a Selecionar</h3>
+            <div class="abas">
+                <button class="aba" onclick="abrirAba('diretorios')">Diretórios</button>
+                <button class="aba" onclick="abrirAba('dispositivo')">Imagens do Dispositivo</button>
+                <button class="aba" onclick="abrirAba('arquivo')">Arquivo do Dispositivo</button>
+            </div>
+            <div id="diretorios" class="conteudo-aba">
+                <h4>Imagens de Diretórios</h4>
+                <div id="lista-imagens-diretorios">
+                    <!-- Conteúdo de imagens dos diretórios -->
+                </div>
+            </div>
+            <div id="dispositivo" class="conteudo-aba" style="display:none;">
+                <h4>Imagens do Dispositivo</h4>
+                <div id="lista-imagens-dispositivo">
+                    <!-- Conteúdo de imagens do dispositivo -->
+                </div>
+            </div>
+            <div id="arquivo" class="conteudo-aba" style="display:none;">
+                <h4>Selecionar Arquivo do Dispositivo</h4>
+                <input type="file" id="selecionar-arquivo" multiple>
+                <div id="lista-imagens-arquivo">
+                    <!-- Miniaturas de imagens carregadas -->
+                </div>
+            </div>
+        </aside>
+
+        <section id="visualizador">
+            <h3>Visualizador XR</h3>
+            <div id="area-visualizacao">
+                <!-- Área principal para exibição de imagens -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="projeto-rda">
+            <h3>Projeto Rda</h3>
+            <!-- Controles para o Projeto Rda -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
